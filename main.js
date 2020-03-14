@@ -16,8 +16,25 @@ const getUsers = e => {
         return response.json();
       }
     })
-    .then(result => console.log(result))
+    .then(result => showUsers(result.results))
     .catch(err => console.log(err));
+};
+
+const showUsers = users => {
+  const resultArea = document.querySelector(".user-list");
+  resultArea.innerHTML = "";
+  users.forEach(user => {
+    const { name, picture } = user;
+    const { title, first, last } = name;
+    const { medium } = picture;
+    const item = document.createElement("div");
+    item.classList.add("user");
+    item.innerHTML = `
+        <div class="user__name">${title.toUpperCase()} ${first} ${last}</div>
+        <img class="user__image" src="${medium}">
+    `;
+    resultArea.appendChild(item);
+  });
 };
 
 window.addEventListener("DOMContentLoaded", () => {

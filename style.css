@@ -19,7 +19,7 @@ select {
 
 .generator-input,
 .generator__select {
-  width: 100px;
+  width: 180px;
   padding: 2px 5px;
 }
 
@@ -63,4 +63,22 @@ select {
 
 .generator__input-name {
   padding: 10px 20px;
+}
+
+.user-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.user {
+  flex-basis: 33.333%;
+  display: flex;
+  align-items: center;
+}
+
+.user__image {
+  order: -1;
+  padding: 20px;
 }

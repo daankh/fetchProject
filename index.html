@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <button>Pobierz użytkownikow</button>
+    <form class="generator">
+      <div class="generator__inputs-wrapper">
+        <label class="generator__input-name">
+          <span class="generator__input-name-label">Płeć</span>
+          <select name="gender" class="generator__select">
+            <option value="both" selected>Wszystkie</option>
+            <option value="female">Kobiety</option>
+            <option value="male">Mężczyźni</option>
+          </select>
+        </label>
+        <label class="generator__input-name">
+          <span class="generator__input-name-label">Ilość wyników</span>
+          <input
+            type="number"
+            name="users-number"
+            class="generator-input"
+            value="10"
+          />
+        </label>
+      </div>
+      <div class="generator__button-wrapper">
+        <input type="submit" class="button generator__button" value="Pobierz" />
+      </div>
+    </form>
     <script src="./main.js"></script>
   </body>
 </html>
